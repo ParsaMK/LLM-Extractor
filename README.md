@@ -1,4 +1,45 @@
-The code is run in a docker environment. To build the container run "docker compose up --build" and to connect to bash run "docker compose exec dev-env bash".
-Put your pdf files in a folder named PDFs and run parser.py to get the text files inside another folder named processed_texts. Now you can choose each of the texts inside the extractor.py file and extract the information running the code.
+# Project Overview
 
---Warning: In order to access openAI's API you'd need a key. It's recommended to add a file called .env and add the key inside it.
+This project provides a streamlined workflow for extracting and processing text from PDF files and then using it to extract structured information with the help of OpenAI's API. The code is designed to run in a Dockerized environment for consistency and ease of use.
+
+---
+
+## How to Use
+
+1. **Set Up the Docker Environment**
+   - Build the Docker container by running:
+     ```bash
+     docker compose up --build
+     ```
+   - To access the container's bash, use:
+     ```bash
+     docker compose exec dev-env bash
+     ```
+
+2. **Prepare Your Files**
+   - Place your PDF files in a folder named `PDFs` (create the folder in the project directory if it doesn't already exist).
+
+3. **Run the Parser**
+   - Execute `parser.py` to process the PDFs.
+   - The extracted text will be saved as individual files inside a folder named `processed_texts`.
+
+4. **Extract Information**
+   - Open `extractor.py` to select one of the processed text files.
+   - Run the script to extract the desired information.
+
+---
+
+## Important Notes
+
+- **OpenAI API Key**
+  - To use OpenAI's API, you'll need an API key.
+  - It is recommended to create a `.env` file in the project directory and store your API key securely inside it as follows:
+    ```env
+    OPENAI_API_KEY=your_key_here
+    ```
+
+- Make sure you have proper access and permissions for the API key to ensure seamless integration.
+
+---
+
+This setup ensures a clean and efficient way to handle and process financial product documents. Happy coding!
