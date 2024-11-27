@@ -1,0 +1,13 @@
+version: '3'
+services:
+  dev-env:
+    build: .
+    env_file:
+      - .env
+    image: my-dev-env
+    volumes:
+      - .:/app
+    stdin_open: true  # Keep the stdin open to interact with the container
+    tty: true         # Keep the terminal open to interact with the container
+    ports:
+      - "8080:8080"   # Maps port 8080 inside the container to port 8080 on the host machine
