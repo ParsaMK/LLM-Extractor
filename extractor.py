@@ -1,15 +1,13 @@
 from langchain.prompts import PromptTemplate
-from langchain.llms import OpenAI
+from langchain_openai import ChatOpenAI  # Use ChatOpenAI for chat models like GPT-4
 from langchain.chains import LLMChain
 
+import pprint
 import os
 import openai
 
 # Get the OpenAI API key from the environment variable
 openai.api_key = os.getenv("OPENAI_API_KEY")
-
-
-
 
 # Define your prompt template
 prompt = PromptTemplate(
@@ -29,19 +27,18 @@ prompt = PromptTemplate(
     """
 )
 
+# Initialize the ChatOpenAI model (use ChatOpenAI for GPT-4)
+llm = ChatOpenAI(api_key=openai.api_key, model="gpt-4")
 
-# Initialize OpenAI model (or any other model you are using)
-llm = OpenAI(api_key="your_openai_api_key")
-
-# Combine the prompt with the model
+# Combine the prompt with the model using LLMChain
 chain = LLMChain(llm=llm, prompt=prompt)
 
-# Example extracted text (replace with actual text from your PDF)
-document_text = "Your extracted document content goes here."
+# Read document text from the file
+with open("./processed_texts/KID2.txt", "r") as file:
+    document_text = file.read()
 
-# Get the results from LangChain
-result = chain.run({"text": document_text})
+# Get the results from LangChain using invoke instead of run
+result = chain.invoke({"text": document_text})
 
 # Print the extracted information
-print(result)
-
+pprint.pprint(result)
