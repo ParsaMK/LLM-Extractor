@@ -43,3 +43,11 @@ This project provides a streamlined workflow for extracting and processing text 
 ---
 
 This setup ensures a clean and efficient way to handle and process financial product documents. Happy coding!
+
+
+
+
+To run the server, run the following code: 
+```bash
+   streamlit run streamlit.py --server.port=8080
+```
