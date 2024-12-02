@@ -1,4 +1,3 @@
-
 with open("./processed_texts/KID2.txt", "r") as file:
     text = file.read()
 

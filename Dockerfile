@@ -16,6 +16,9 @@ COPY requirements.txt /app/
 # Install the required dependencies
 RUN pip install --no-cache-dir -r requirements.txt
 
+# Download NLTK data during image build
+RUN python -c "import nltk; nltk.download('stopwords'); nltk.download('punkt'); nltk.download('wordnet')"
+
 # Copy the rest of the application code into the container
 COPY . /app/
 

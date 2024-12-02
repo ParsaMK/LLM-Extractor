@@ -1,0 +1,27 @@
+
+esempio di input e output atteso:
+input:
+Il testo è un estratto da un documento che dettaglia le specifiche di un'opzione di investimento sotto il prodotto Zurich Invest Platform Premium. L'opzione di investimento è Vontobel Clean Technology I EUR, che mira a ottenere un potenziale alto aumento di valore in EUR investendo principalmente in azioni di aziende che operano nel campo della "tecnologia pulita". Questa opzione è destinata a investitori al dettaglio di età compresa tra 18 e 85 anni con una capacità di investimento iniziale tra 250.000€ e 750.000€, che hanno almeno una conoscenza di base e un'esperienza degli strumenti finanziari e una propensione al rischio media. 
+
+L'indicatore sintetico di rischio è 4 su 7, indicando un livello di rischio medio. Zurich Invest Platform Premium non fornisce alcuna forma di protezione per le future prestazioni del mercato. Il rendimento potenziale dipenderà dalle future prestazioni dei mercati, che sono incerte e non possono essere predette con precisione.
+
+Il testo fornisce anche informazioni su scenari di performance, costi e altre informazioni rilevanti. In caso di rimborso anticipato, i costi totali dopo 1 anno sarebbero di €374, e dopo 8 anni sarebbero di €4144. L'incidenza del costo annuale sarebbe del 3,7% nel primo anno e del 4,0% ogni anno successivo. Il documento dettaglia anche i costi associati al prodotto e il loro impatto sull'investimento nel tempo.
+
+- ISIN: Non presente
+- SRI: 4
+- RHP: Non specificato
+- Nome del prodotto: Vontobel Clean Technology I EUR
+- Nome dell'emittente: Zurich Invest Platform Premium
+- Target market: Investitori al dettaglio di età compresa tra 18 e 85 anni con una capacità di investimento iniziale tra 250.000€ e 750.000€, che hanno almeno una conoscenza di base e un'esperienza degli strumenti finanziari e una propensione al rischio media.
+output:
+-	ISIN: LU0690021539
+-	SRI: 2
+-	RHP: 5
+-	NOME DEL PRODOTTO: Unit Personal Private
+-	NOME DELL'EMITTENTE: Fineco Asset Management
+-	TARGET MARKET: il Fondo Esterno è rivolto ai clienti aventi una buona conoscenza e/o esperienza dei mercati finanziari e assicurativi e una bassa tolleranza al rischio finanziario, i quali intendono investire il proprio capitale nel medio periodo accettando i possibili rischi di perdita connessi all'investimento finanziario.
+-	SCENARI DI PERFORMANCE A RHP:
+o	stress -5.82%, 
+o	sfavorevole -2.73%, 
+o	moderato 0.13%. 
+o	favorevole 0.99%
